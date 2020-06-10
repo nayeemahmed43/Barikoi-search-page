@@ -1,17 +1,19 @@
-import React from 'react';
-import {connect} from 'react-redux';
+import React from "react";
+import { useSelector } from "react-redux";
+
 
 const ApiDataList = (props) => {
-    
-    return (
-        <div>
-            
-        </div>
-    );
+  const places = useSelector((state) => state.data);
+  console.log( places)
+  
+  return (
+    <div>
+        
+        {
+            places.map(i=><p>i.address</p>)
+        }
+    </div>
+  )
 };
 
-function mapStateToProps( {data} ){
-    return {data}; 
-}
-
-export default connect(mapStateToProps)(ApiDataList);
+export default ApiDataList;
