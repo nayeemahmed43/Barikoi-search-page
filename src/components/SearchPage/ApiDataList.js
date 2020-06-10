@@ -10,7 +10,7 @@ const ApiDataList = (props) => {
     <div>
         
         {
-            places.map(i=><p>i.address</p>)
+            places.map(i=><p>{i.address}</p>)
         }
     </div>
   )
